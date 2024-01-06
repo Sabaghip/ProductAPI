@@ -1,0 +1,274 @@
+{
+	"info": {
+		"_postman_id": "b39f8fe9-9962-45fa-a754-d1088add6150",
+		"name": "midterm",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "25540085"
+	},
+	"item": [
+		{
+			"name": "sign up",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\" : \"parsa\",\r\n    \"password\" : \"123456789\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "0.0.0.0:1373/users/signup",
+					"host": [
+						"0",
+						"0",
+						"0",
+						"0"
+					],
+					"port": "1373",
+					"path": [
+						"users",
+						"signup"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "log in",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\" : \"parsa\",\r\n    \"password\" : \"123456789\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "0.0.0.0:1373/users/login",
+					"host": [
+						"0",
+						"0",
+						"0",
+						"0"
+					],
+					"port": "1373",
+					"path": [
+						"users",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get all baskets of user",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTQ5NzYxLCJleHAiOjE3MDI4MzMwNDF9.9bOGT6FFZ6TSX2jmA_R45PlY2RYzP6jIEylrYmqMeeI",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "0.0.0.0:1373/baskets/",
+					"host": [
+						"0",
+						"0",
+						"0",
+						"0"
+					],
+					"port": "1373",
+					"path": [
+						"baskets",
+						""
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "ww",
+							"disabled": true
+						},
+						{
+							"key": "family",
+							"value": "sss",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create basket",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTQ5NzYxLCJleHAiOjE3MDI4MzMwNDF9.9bOGT6FFZ6TSX2jmA_R45PlY2RYzP6jIEylrYmqMeeI",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"Data\" : {\"title\":\"midterm\"},\r\n    \"State\" : \"PENDING\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "0.0.0.0:1373/baskets/",
+					"host": [
+						"0",
+						"0",
+						"0",
+						"0"
+					],
+					"port": "1373",
+					"path": [
+						"baskets",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get basket by id",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTQ5NzYxLCJleHAiOjE3MDI4MzMwNDF9.9bOGT6FFZ6TSX2jmA_R45PlY2RYzP6jIEylrYmqMeeI",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "0.0.0.0:1373/baskets/673808",
+					"host": [
+						"0",
+						"0",
+						"0",
+						"0"
+					],
+					"port": "1373",
+					"path": [
+						"baskets",
+						"673808"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "edit basket",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTQ5NzYxLCJleHAiOjE3MDI4MzMwNDF9.9bOGT6FFZ6TSX2jmA_R45PlY2RYzP6jIEylrYmqMeeI",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"Data\" : {\"title\":\"midterm\"},\r\n    \"State\" : \"COMPLETED\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "0.0.0.0:1373/baskets/673808",
+					"host": [
+						"0",
+						"0",
+						"0",
+						"0"
+					],
+					"port": "1373",
+					"path": [
+						"baskets",
+						"673808"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete basket",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTQ5NzYxLCJleHAiOjE3MDI4MzMwNDF9.9bOGT6FFZ6TSX2jmA_R45PlY2RYzP6jIEylrYmqMeeI",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "0.0.0.0:1373/baskets/673808",
+					"host": [
+						"0",
+						"0",
+						"0",
+						"0"
+					],
+					"port": "1373",
+					"path": [
+						"baskets",
+						"673808"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
